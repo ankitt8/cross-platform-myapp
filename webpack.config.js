@@ -24,7 +24,7 @@ module.exports = {
           options: {
             presets: [
               '@babel/preset-env',
-              ['@babel/preset-react',{ runtime: 'automatic' }],
+              ['@babel/preset-react', { runtime: 'automatic' }],
               '@babel/preset-typescript',
               '@babel/preset-flow'
             ],
@@ -46,7 +46,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: './index.html',
     }),
   ],
   devServer: {
