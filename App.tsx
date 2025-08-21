@@ -30,7 +30,7 @@ function App() {
       </View>
       <View style={{ marginTop: 20, width: '100%', ...styles.container }}>
         <Text style={styles.textpoc}>POC with rn 80, react 18, rnw 0.21.0 </Text>
-        <Image style={styles.image} source={require('./images/dependencies.png')} />
+        <Image style={styles.image} source={require('./images/react18.png')} />
         <Text style={styles.text}>rn and rnw starts complaining of peer react version 19 needed, tried to just keep rn 80 and other dependencies like rnw and react dom compatible with react 18 ,still rn 80 will complain it want react 19  </Text>
         <Text style={styles.text}></Text>
         <Image style={styles.image} source={require('./images/error-withreact18.png')} />
