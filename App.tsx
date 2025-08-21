@@ -6,17 +6,25 @@
  */
 
 
-import { StatusBar, StyleSheet, useColorScheme, View, Text } from 'react-native';
+import { Platform, StyleSheet, useColorScheme, View, Text } from 'react-native';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <Text style={styles.text}>POC with rn 80, react 19, rnw 0.21.0 </Text>
 
-      <Text>Hello World</Text>
 
+      {Platform.OS === "web" ? (
+        <a href="https://github.com/ankitt8/cross-platform-myapp" target="_blank" rel="noopener noreferrer">
+          Code link
+        </a>
+      ) : null}
+
+      <View style={{ marginTop: 20, background: 'red' }}>
+        <Text style={styles.text}>POC with rn 80, react 18, rnw 0.21.0 </Text>
+        <Text style={styles.text}>rn and rnw starts complaining of peer react version 19 needed </Text>
+      </View>
     </View>
   );
 }
@@ -24,6 +32,12 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f5f5f5",
+  },
+  text: {
+    fontSize: 20,
   },
 });
 
