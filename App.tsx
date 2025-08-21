@@ -6,13 +6,14 @@
  */
 
 
-import { Platform, StyleSheet, useColorScheme, View, Text } from 'react-native';
+import { Platform, StyleSheet, Image, View, Text } from 'react-native';
 
 function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>POC with rn 80, react 19, rnw 0.21.0 </Text>
+      <Text style={styles.textpoc}>POC with rn 80, react 19, rnw 0.21.0 </Text>
+      <Image style={styles.image} source={require('./images/dependencies.png')} />
 
 
       {Platform.OS === "web" ? (
@@ -28,9 +29,12 @@ function App() {
 
 
 
-      <View style={{ marginTop: 20, background: 'red' }}>
-        <Text style={styles.text}>POC with rn 80, react 18, rnw 0.21.0 </Text>
+
+      <View style={{ marginTop: 20, width: '100%' }}>
+        <Text style={styles.textpoc}>POC with rn 80, react 18, rnw 0.21.0 </Text>
+        <Image style={styles.image} source={require('./images/dependencies.png')} />
         <Text style={styles.text}>rn and rnw starts complaining of peer react version 19 needed </Text>
+        <Image style={styles.image} source={require('./images/error-withreact18.png')} />
       </View>
     </View>
   );
@@ -45,6 +49,17 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
+  },
+  textpoc: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  image: {
+    width: '70%',
+    height: 200,
+    margin: 20,
   },
 });
 
