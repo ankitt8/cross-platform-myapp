@@ -20,6 +20,13 @@ function App() {
           Code link
         </a>
       ) : null}
+      {Platform.OS === "web" ? (
+        <a href="https://github.com/facebook/react-native/blob/0ef21bf8ad9836ad34f459795e180dd3e34f7618/package.json#L106" target="_blank" rel="noopener noreferrer">
+          rn github code same is mentioned as dev dependency in their codebase for rn 80 & greater version
+        </a>
+      ) : null}
+
+
 
       <View style={{ marginTop: 20, background: 'red' }}>
         <Text style={styles.text}>POC with rn 80, react 18, rnw 0.21.0 </Text>
