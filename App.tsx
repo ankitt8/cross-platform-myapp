@@ -12,6 +12,7 @@ function App() {
 
   return (
     <View>
+      <Text style={{ ...styles.textpoc, color: 'orange' }}>TLDR;RN 80 doesn't work with react 18</Text>
       <View style={styles.container}>
         <Text style={styles.textpoc}>POC with rn 80, react 19, rnw 0.21.0 </Text>
         <Image style={styles.image} source={require('./images/dependencies.png')} />
